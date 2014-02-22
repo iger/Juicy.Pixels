@@ -406,6 +406,10 @@ type Pixel32 = Word32
 -- bounded value range is mapped to the closed interval [0,1] i.e.
 --
 -- > map promotePixel [0, 1 .. 255 :: Pixel8] == [0/255, 1/255 .. 1.0 :: PixelF]
+--
+-- What do negative numbers, numbers greater than one and NaNs mean,
+-- if anything, and how does the library treat them is unclear
+-- to the author of this comment.
 type PixelF = Float
 
 -- | Pixel type storing Luminance (Y) and alpha information
